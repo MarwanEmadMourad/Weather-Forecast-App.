@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Weather</title>
+    <link rel="icon" href="/img/weather.png">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <div class = "main-content">
+        {{>header}}
+        <p>Use this site to get weather forecast. </p>
+        <input type="text" id="location-text" placeholder="Type a Location...">
+        <button id="get-weather" >Get Forecast</button>
+        <p id="location"></p>
+        <p id = "forecast"></p>
+    </div>
+    {{>footer}}
+    <script src = "scripts/app.js"> </script>
+</body>
+</html>

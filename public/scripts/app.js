@@ -3,7 +3,7 @@ const forecastMessage = document.querySelector("#forecast")
 const locationElem = document.querySelector("#location")
 
 const renderForecast = async (location) =>{
-    const response = await fetch(`http://localhost:3000/weather?address=${location}`)
+    const response = await fetch(`/weather?address=${location}`)
     if (response.status === 200){
         const data = await response.json()
         if (data.error){

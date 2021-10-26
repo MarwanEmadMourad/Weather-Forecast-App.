@@ -29,6 +29,13 @@ app.get('',(req,res) =>{
     })
 })
 
+app.get('/help',(req,res) =>{
+    res.render('help',{
+        title:'Help',
+        helpText: 'Some helpful text.'
+    })
+})
+
 app.get('/about',(req,res) =>{
     res.render('about',{
         title:'About Page.',
@@ -36,12 +43,7 @@ app.get('/about',(req,res) =>{
     })
 })
 
-app.get('/help',(req,res) =>{
-    res.render('help',{
-        title:'Help',
-        helpText: 'Some helpful text.'
-    })
-})
+
 
 app.get('/weather' , (req,res) =>{
     if (!req.query.address){

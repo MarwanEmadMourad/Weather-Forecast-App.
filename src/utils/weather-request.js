@@ -7,6 +7,7 @@ const getWeatherInfo = (obj , callback) =>{
         if (err) {
             callback('unable to fetch weather info.')
         } else if (response.body.error) {
+            console.log(response.body.error)
             callback('invalid location.')
         } else {
             const data = response.body.current

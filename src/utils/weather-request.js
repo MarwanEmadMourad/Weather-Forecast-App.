@@ -2,7 +2,7 @@ const request = require('postman-request')
 
 
 const getWeatherInfo = (obj , callback) =>{
-    const weatherURL = 'http://api.weatherstack.com/current?access_key=dddd97e5d2fb9cd21c71b3d1e15cd665&query='+ obj.longitude +','+ obj.latitude 
+    const weatherURL = `http://api.weatherstack.com/current?access_key=dddd97e5d2fb9cd21c71b3d1e15cd665&query=${obj.latitude},${obj.longitude}`
     request( {url:weatherURL,json:true} , (err,response) => {
         if (err) {
             callback('unable to fetch weather info.')

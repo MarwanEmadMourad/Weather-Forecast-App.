@@ -7,9 +7,9 @@ const getWeatherInfo = (obj , callback) =>{
         if (err) {
             callback('unable to fetch weather info.')
         } else if (response.body.error) {
-            console.log(response.body.error)
             callback('invalid location.')
         } else {
+            console.log('here')
             const data = response.body.current
             const message =`${data.weather_descriptions[0]} in ${obj.location}, the temperature is ${data.temperature} and it feels like ${data.feelslike}.`
             callback(undefined,{

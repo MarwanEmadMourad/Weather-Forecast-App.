@@ -5,8 +5,6 @@ const geocoding = (place,callback) =>{
     request({url:mapURL , json:true} , (err,response) =>{
         if (err) {
             callback('unable to fetch location info.')
-        } else if (!response.body.features.length) {
-            callback('invalid location.')
         } else {
             const data = response.body.features[0]
             const long = data.center[0]

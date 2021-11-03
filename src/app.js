@@ -61,6 +61,7 @@ app.get('/weather' , (req,res) =>{
                 if (error){
                     res.send({ error })
                 } else {
+                    console.log(data.message)
                     res.send({
                         forecast: data.message ,
                         location: data.location

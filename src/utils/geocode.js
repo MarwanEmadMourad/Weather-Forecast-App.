@@ -18,5 +18,5 @@ const geocoding = (place,callback) =>{
         }
     })
 }
-
+  
 module.exports = {geocoding}
